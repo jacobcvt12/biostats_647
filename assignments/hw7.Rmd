@@ -1,0 +1,24 @@
+---
+title: "Homework 7"
+author: "Jacob Carey"
+date: \today
+header-includes:
+    - \usepackage{amsthm}
+    - \usepackage{mathtools}
+output: pdf_document
+---
+
+1.
+
+2.
+    (i)
+
+    (ii)
+
+    (iii)
+
+3.
+
+4.
+
+5.
