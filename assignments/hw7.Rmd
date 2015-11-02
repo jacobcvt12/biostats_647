@@ -16,17 +16,20 @@ library(ggplot2)
 
 2.
     (i)
+        The second derivative of $e^x$ is $e^x$, which is positive on the interval $(-\infty, \infty)$ and is thus convex.
         ```{r p2-i}
         x <- seq(-10, 10, by=0.1)
         qplot(x, exp(x), geom="line")
         ```
 
     (ii)
+        The second derivative of $x^2$ is $2$, which is positive on the interval $(-\infty, \infty)$ and is thus convex.
         ```{r p2-ii}
         qplot(x, x^2, geom="line")
         ```
 
     (iii)
+        The second derivative of $\ln x$ is $-\frac{1}{x^2}$, which is not postive on the interval $(-\infty, \infty)$ and is thus not convex.
         ```{r p2-iii}
         x <- seq(0, 10, by=0.1)
         qplot(x, log(x), geom="line")
