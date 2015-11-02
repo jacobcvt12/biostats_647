@@ -8,14 +8,29 @@ header-includes:
 output: pdf_document
 ---
 
+```{r libs, echo=FALSE}
+library(ggplot2)
+```
+
 1.
 
 2.
     (i)
+        ```{r p2-i}
+        x <- seq(-10, 10, by=0.1)
+        qplot(x, exp(x), geom="line")
+        ```
 
     (ii)
+        ```{r p2-ii}
+        qplot(x, x^2, geom="line")
+        ```
 
     (iii)
+        ```{r p2-iii}
+        x <- seq(0, 10, by=0.1)
+        qplot(x, log(x), geom="line")
+        ```
 
 3.
 
