@@ -38,5 +38,15 @@ library(ggplot2)
 3.
 
 4.
+    ```{r p4}
+    x <- seq(-0.99, 1.99, by=0.01)
+    g_x <- (1 + x) * log(1 + x)
+    R_x <- (x ^ 2) / (2 * (1 + x / 3))
+    data <- rbind(data.frame(x=x, y=g_x, label="g(x)"),
+                  data.frame(x=x, y=x+R_x, label="x+R(x)"))
+    ggplot(data, aes(x=x, y=y)) +
+        geom_line(aes(colour=label, linetype=label))
+    ```
+    This is a pretty good approximation
 
 5.
