@@ -35,7 +35,16 @@ library(ggplot2)
         qplot(x, log(x), geom="line")
         ```
 
-3.
+3. 
+    $$
+    \begin{aligned}
+    \text{cov}(X,Y) &= E[XY]-E[X]E[Y] \\
+    &= E[E[XY|Z]]-E[E[X|Z]]E[E[Y|Z]] \\
+    &= E[\text{cov}(X,Y|Z)+E[X|Z]E[Y|Z]]-E[E[X|Z]]E[E[Y|Z]] \\
+    &= E[\text{cov}(X,Y|Z)]+E[E[X|Z]E[Y|Z]]-E[E[X|Z]]E[E[Y|Z]] \\
+    &= E[\text{cov}(X,Y|Z)]+\text{cov}(E[X|Z],E[Y|Z])
+    \end{aligned}
+    $$
 
 4.
     ```{r p4}
