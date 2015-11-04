@@ -49,4 +49,17 @@ library(ggplot2)
     ```
     This is a pretty good approximation
 
-5.
+5. Given that each X_i is $p$ and the variance is $p(1-p)$, then the mean and variance of $\bar{X_n}$ is also $p$ and $p(1-p)$. Then by Chebyshev's inequality (and by extension, the weak law  of large numbers)
+   $$
+   P(|\bar{X_n}-p|<\epsilon) \geq 1 - \frac{p(1-p)}{n\epsilon^2}
+   $$
+   If we want the probability of the inequality to be at least 0.95, we solve for n
+   $$
+   \begin{aligned}
+   1-\frac{p(1-p)}{n\times 0.05^2} = 0.95 \\
+   n - 0.95n = \frac{p(1-p)}{0.05^2} \\
+   \boxed{n=\frac{p(1-p)}{0.05^3}}
+   \end{aligned}
+   $$
+   In election polling, this is useful for determining a sample size such that with frequency 0.95, the sample mean will be within $0.05$ of the true proportion.
+
