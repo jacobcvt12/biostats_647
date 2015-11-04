@@ -12,7 +12,7 @@ output: pdf_document
 library(ggplot2)
 ```
 
-1.
+1. For $X_1, ..., X_n \sim \text{N}(\mu, \sigma^2)$, then $\bar{X_n} \sim \text{N}(\mu, \frac{\sigma^2}{n})$. Then the expected value of $e^{\bar{X_n}}$ is just the moment generating function $M_{\bar{X_n}}(t=1)=\exp(\mu+\frac{\sigma^2}{n})$.
 
 2.
     (i)
