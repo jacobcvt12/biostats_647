@@ -11,4 +11,4 @@ diff_1 = diff(form, x, 1)
 diff_2 = diff(form, x, 2)
 
 pretty_print(diff_1)
-findroot(diff_1, 0)
+findroot(diff_1, (-1, 2))
