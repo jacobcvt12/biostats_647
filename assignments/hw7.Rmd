@@ -48,7 +48,7 @@ library(ggplot2)
 
 4. We set $Q(x) = g(x) - x - R(x)$ or
    $$
-   Q(x) = - \frac{x^{2}}{\frac{2 x}{3} + 2} - x + \left(x + 1\right) \og{\left (x + 1 \right )}
+   Q(x) = - \frac{x^{2}}{\frac{2 x}{3} + 2} - x + \left(x + 1\right) \log{\left (x + 1 \right )}
    $$
 
    We take the first derivative and set it equal to zero 
