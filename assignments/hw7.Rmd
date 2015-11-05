@@ -46,7 +46,16 @@ library(ggplot2)
     \end{aligned}
     $$
 
-4.
+4. We set $Q(x) = g(x) - x - R(x)$ or
+   $$
+   Q(x) = - \\frac{x^{2}}{\\frac{2 x}{3} + 2} - x + \eft(x + 1\\right) \og{\eft (x + 1 \\right )}
+   $$
+
+   We take the first derivative and set it equal to zero 
+   $$
+   Q'(x)=\\frac{2 x^{2}}{3 \eft(\\frac{2 x}{3} + 2\\right)^{2}} - \\frac{2 x}{\\frac{2 x}{3} + 2} + \og{\eft (x + 1 \\right )}
+   $$
+   Clearly, $Q'(x)$ has a root at 0, and so $Q(x)$ has an extremum at 0. Since other values for $Q(x)$ are greater than $Q(0)$, this is a minimum. $Q(0)=0$, so the inequality holds.
     ```{r p4}
     x <- seq(-0.99, 1.99, by=0.01)
     g_x <- (1 + x) * log(1 + x)
