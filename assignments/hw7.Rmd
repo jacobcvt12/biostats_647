@@ -58,7 +58,7 @@ library(ggplot2)
     ```
     This is a pretty good approximation
 
-5. Given that each X_i is $p$ and the variance is $p(1-p)$, then the mean and variance of $\bar{X_n}$ is also $p$ and $p(1-p)$. Then by Chebyshev's inequality (and by extension, the weak law  of large numbers)
+5. Given that each $X_i$ is $p$ and the variance is $p(1-p)$, then the mean and variance of $\bar{X_n}$ is also $p$ and $p(1-p)$. Then by Chebyshev's inequality (and by extension, the weak law  of large numbers)
    $$
    P(|\bar{X_n}-p|<\epsilon) \geq 1 - \frac{p(1-p)}{n\epsilon^2}
    $$
