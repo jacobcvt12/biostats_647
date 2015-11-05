@@ -10,5 +10,8 @@ form = g - x - R
 diff_1 = diff(form, x, 1)
 diff_2 = diff(form, x, 2)
 
-pretty_print(diff_1)
-findroot(diff_1, (-1, 2))
+
+def diff_func(x):
+    return 2*x**2/(3*(2*x/3 + 2)**2) - 2*x/(2*x/3 + 2) + ln(x + 1)
+
+findroot(diff_func, 0)
