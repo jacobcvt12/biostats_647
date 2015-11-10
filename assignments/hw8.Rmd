@@ -36,6 +36,23 @@ abline(a=5, b=0)
 ```
 
 2.
+```{r p2}
+
+# normal
+normal <- matrix(rnorm(100 * trials, 5, 1), ncol=trials)
+normal <- colMeans(normal)
+hist(normal)
+
+# bernoulli
+bernoulli <- matrix(rbinom(100 * trials, 1, 0.4), ncol=trials)
+bernoulli <- colMeans(bernoulli)
+hist(bernoulli)
+
+# poisson
+poisson <- matrix(rpois(100 * trials, 5), ncol=trials)
+poisson <- colMeans(poisson)
+hist(poisson)
+```
 
 3.
 
