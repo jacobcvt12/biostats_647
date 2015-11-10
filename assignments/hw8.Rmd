@@ -40,8 +40,9 @@ abline(a=5, b=0)
 
 # normal
 normal <- matrix(rnorm(100 * trials, 5, 1), ncol=trials)
-normal <- colMeans(normal)
+normal <- scale(colMeans(normal))
 hist(normal)
+curve(dnorm(x, 5, 1), -2, 8, col="blue", add=TRUE)
 
 # bernoulli
 bernoulli <- matrix(rbinom(100 * trials, 1, 0.4), ncol=trials)
