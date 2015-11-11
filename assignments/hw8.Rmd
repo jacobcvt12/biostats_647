@@ -38,25 +38,26 @@ abline(a=5, b=0)
 
 2.
 ```{r p2}
-trials <- 300
-
 # normal
 normal <- matrix(rnorm(100 * trials, 5, 1), ncol=trials)
-g <- colMeans(normal)
-qplot(g, geom="density") + 
-    stat_function(fun=dnorm, args=list(mean=5, sd=sqrt(1/100)), colour="blue")
+g <- sqrt(100) * (colMeans(normal) - 5) / 1
+qplot(g, geom="blank") + 
+    geom_histogram(aes(y=..density..)) +
+    stat_function(fun=dnorm, args=list(mean=0, sd=1), colour="blue")
 
 # bernoulli
 bernoulli <- matrix(rbinom(100 * trials, 1, 0.4), ncol=trials)
-g <- colMeans(bernoulli)
-qplot(g, geom="density") + 
-    stat_function(fun=dnorm, args=list(mean=0.4, sd=sqrt(0.4*0.6/100)), colour="blue")
+g <- sqrt(100) * (colMeans(bernoulli) - 0.4) / sqrt(0.4 * 0.6)
+qplot(g, geom="blank") + 
+    geom_histogram(aes(y=..density..)) +
+    stat_function(fun=dnorm, args=list(mean=0, sd=1), colour="blue")
 
 # poisson
 poisson <- matrix(rpois(100 * trials, 5), ncol=trials)
-g <- colMeans(poisson)
-qplot(g, geom="density") + 
-    stat_function(fun=dnorm, args=list(mean=5, sd=sqrt(5/100)), colour="blue")
+g <- sqrt(100) * (colMeans(poisson) - 5) / sqrt(5)
+qplot(g, geom="blank") + 
+    geom_histogram(aes(y=..density..)) +
+    stat_function(fun=dnorm, args=list(mean=0, sd=1), colour="blue")
 ```
 
 3.
