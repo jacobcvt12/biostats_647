@@ -22,18 +22,18 @@ x <- 1:trials
 
 # normal
 normal <- rnorm(trials, mean=5, sd=1)
-qplot(x=x, y=cumsum(normal) / x, main="Normal(5, 1)")
-abline(a=5, b=0)
+qplot(x=x, y=cumsum(normal) / x, main="Normal(5, 1)") +
+    geom_hline(yintercept=5)
 
 # bernoulli
 bernoulli <- rbinom(trials, 1, 0.4)
-qplot(x=x, y=cumsum(bernoulli) / x, main="Bernoulli(0.4)")
-abline(a=0.4, b=0)
+qplot(x=x, y=cumsum(bernoulli) / x, main="Bernoulli(0.4)") +
+    geom_hline(yintercept=0.4)
 
 # poisson
 poisson <- rpois(trials, 5)
-qplot(x=x, y=cumsum(poisson) / x, main="Poisson(5)")
-abline(a=5, b=0)
+qplot(x=x, y=cumsum(poisson) / x, main="Poisson(5)") +
+    geom_hline(yintercept=5)
 ```
 
 2.
