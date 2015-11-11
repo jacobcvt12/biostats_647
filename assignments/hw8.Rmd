@@ -17,22 +17,22 @@ set.seed(1)
 1. Here I show a running mean of draws from a specified distribution to show that the sample average converges in distribution to the expected value.
 ```{r p1}
 # number of draws
-trials <- 1e4
+trials <- 1e3
 x <- 1:trials
 
 # normal
 normal <- rnorm(trials, mean=5, sd=1)
-plot(x, cumsum(normal) / x, main="Normal(5, 1)")
+qplot(x=x, y=cumsum(normal) / x, main="Normal(5, 1)")
 abline(a=5, b=0)
 
 # bernoulli
 bernoulli <- rbinom(trials, 1, 0.4)
-plot(x, cumsum(bernoulli) / x, main="Bernoulli(0.4)")
+qplot(x=x, y=cumsum(bernoulli) / x, main="Bernoulli(0.4)")
 abline(a=0.4, b=0)
 
 # poisson
 poisson <- rpois(trials, 5)
-plot(x, cumsum(poisson) / x, main="Poisson(5)")
+qplot(x=x, y=cumsum(poisson) / x, main="Poisson(5)")
 abline(a=5, b=0)
 ```
 
