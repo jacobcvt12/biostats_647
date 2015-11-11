@@ -12,6 +12,7 @@ output: pdf_document
 library(ggplot2)
 theme_set(theme_classic())
 set.seed(1)
+knitr::opts_chunk$set(message=FALSE)
 ```
 
 1. Here I show a running mean of draws from a specified distribution to show that the sample average converges in distribution to the expected value.
