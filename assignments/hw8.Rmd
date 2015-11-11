@@ -10,6 +10,7 @@ output: pdf_document
 
 ```{r libs, echo=FALSE}
 library(ggplot2)
+theme_set(theme_classic())
 set.seed(1)
 ```
 
@@ -37,22 +38,25 @@ abline(a=5, b=0)
 
 2.
 ```{r p2}
+trials <- 300
 
 # normal
 normal <- matrix(rnorm(100 * trials, 5, 1), ncol=trials)
-normal <- scale(colMeans(normal))
-hist(normal)
-curve(dnorm(x, 5, 1), -2, 8, col="blue", add=TRUE)
+g <- colMeans(normal)
+qplot(g, geom="density") + 
+    stat_function(fun=dnorm, args=list(mean=5, sd=sqrt(1/100)), colour="blue")
 
 # bernoulli
 bernoulli <- matrix(rbinom(100 * trials, 1, 0.4), ncol=trials)
-bernoulli <- colMeans(bernoulli)
-hist(bernoulli)
+g <- colMeans(bernoulli)
+qplot(g, geom="density") + 
+    stat_function(fun=dnorm, args=list(mean=0.4, sd=sqrt(0.4*0.6/100)), colour="blue")
 
 # poisson
 poisson <- matrix(rpois(100 * trials, 5), ncol=trials)
-poisson <- colMeans(poisson)
-hist(poisson)
+g <- colMeans(poisson)
+qplot(g, geom="density") + 
+    stat_function(fun=dnorm, args=list(mean=5, sd=sqrt(5/100)), colour="blue")
 ```
 
 3.
