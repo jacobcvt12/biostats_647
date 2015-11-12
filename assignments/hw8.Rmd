@@ -68,4 +68,21 @@ qplot(g, geom="blank") +
     $$
     Thus, $x_ny_n=o(a_nb_n)$.
 
-4.
+4. We show $X_n \overset{p}{\to} 0$
+    $$
+    \begin{aligned}
+        \lim_{n \to \infty} P(|X_n - 0| < \epsilon) &= \lim_{n \to \infty} P(X_n < \epsilon) \\
+        &= \lim_{n \to \infty} P(X_n = 0) \text{   (for $\epsilon < 1$)} \\
+        &= \lim_{n \to \infty} (1 - \frac{1}{n}) \\
+        &= 1 \implies \boxed{X_n \overset{p}{\to} 0}
+    \end{aligned}
+    $$
+    Now we show $E(X_n) {\to} 1$.
+    $$
+    \begin{aligned}
+        E(X_n) &= \sum_0^{\infty} x P(X_n = x) \\
+        &= 0 \times (1 - \frac{1}{n}) + 1 \times 0 + 2 \times 0 + ... + (n-1) \times 0 + n \times (\frac{1}{n}) + (n+1) \times 0 + ... \\
+        &= n \times \frac{1}{n} \\
+        &= \boxed{1} \text{   for all $n$}
+    \end{aligned}
+    $$
