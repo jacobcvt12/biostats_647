@@ -61,7 +61,7 @@ qplot(g, geom="blank") +
     stat_function(fun=dnorm, args=list(mean=0, sd=1), colour="blue")
 ```
 
-3. Since $x_n=o(a_n)$ then for all $\epsilon > 0$ there exists $N_1(\epsilon)$ such that if $n \geq N_1(\epsilon) \implies |x_n| < \frac{\epsilon}{K}|a_n|$. Similarly, for $y_n=O(b_n)$ there exists $K>0$ and $N_2(K)$ such that if $n > N_2(K) \implies |y_n| < K|b_n|$. Then 
+3. Since $y_n=O(b_n)$ there exists $K>0$ and $N_2(K)$ such that if $n > N_2(K) \implies |y_n| < K|b_n|$. Similarly, for $x_n=o(a_n)$ for all $\epsilon > 0$ there exists $N_1(\epsilon)$ such that if $n \geq N_1(\epsilon) \implies |x_n| < \frac{\epsilon}{K}|a_n|$. Then
     $$
     n > \max(N_1, N_2) \implies
     |x_n||y_n|=|x_n y_n| < \frac{\epsilon}{K}|a_n|K|b_n|=\epsilon|a_nb_n|
