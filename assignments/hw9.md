@@ -27,5 +27,16 @@ Which is negative binomial distribution.
 5.
 
 6.
+$$
+P(X) = \int_0^{1} {n \choose x} \theta^X(1-\theta)^{n-x}\frac{\theta^{\alpha-1}(1-\theta)^{\beta-1}}{B(\alpha, \beta)}d\theta = {n \choose x}\frac{B(\alpha+x,\beta+n-x)}{B(\alpha, \beta)}
+$$
+$$
+\begin{aligned}
+P(\theta|X) &= \frac{P(X|\theta)P(\theta)}{P(X)} \\
+&= \frac{{n \choose x} \theta^x(1-\theta)^{n-x}\frac{\theta^{\alpha-1}(1-\theta)^{\beta-1}}{B(\alpha, \beta)}}{{n \choose x}\frac{B(\alpha+x, \beta+n-x}{B(\alpha, \beta)}} \\
+&= \frac{\theta^{x+\alpha-1}(1-\theta)^{\beta+n-x-1}}{B(\alpha+x,\beta+n-x)} \\
+\implies P(\theta|X) &= \boxed{\text{Beta}(\alpha+x,\beta+n-x)}
+\end{aligned}
+$$
 
 7.
