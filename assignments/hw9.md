@@ -17,7 +17,7 @@ output: pdf_document
 4. 
 $$
 \begin{aligned}
-\int_0^{\infty} \frac{\lambda^x}{x!}e^{-\lambda}\frac{\lambda_0^r}{\Gamma(r)}\lambda^{r-1}e^{-\lambda_0\lambda}d\lambda \\
+\int_0^{\infty} \frac{\lambda^x}{x!}e^{-\lambda}\frac{\lambda_0^r}{\Gamma(r)}\lambda^{r-1}e^{-\lambda_0\lambda}d\lambda
 &= \frac{\lambda_0^r \Gamma(r+x)}{x!\Gamma(r)(1+\lambda_0)^{x+r-1}} \\
 &= {x+r-1 \choose x}(1-\lambda_0)^{x+r-1}\lambda_0^r
 \end{aligned}
