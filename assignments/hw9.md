@@ -12,7 +12,22 @@ output: pdf_document
 
 2. Clearly, $\sqrt{n}(X_n-\mu) \xrightarrow{d} N(0, \sigma^2)$. For $g(x)=e^x$, it is differentiable everywhere. Then $\sqrt{n}(g(X_n)-g(\mu)) \xrightarrow{d} N(0, e^{2\mu} \sigma^2)$. Thus, $\sqrt{n}(g(X_n)) \xrightarrow{d} N(g(\mu) e^{2\mu} \sigma^2)$. Finally, $g(\bar{X}_n) \xrightarrow{d} N(g(\mu) \frac{e^{2\mu} \sigma^2}{n})$
 
-3.
+3. 
+$$
+E[S]=E[E[S|N]]=E[\sum_i^N X_i] =E[N \mu_x]=\mu_n \mu_x
+$$
+$$
+Var[S]=E[S^2]-E[S]^2
+$$
+$$
+E[S]^2=\mu_n^2\mu_x^2
+$$
+$$
+E[S^2]=E[E[S^2|N]]=E[Var(S|N)+(E[S|N])^2]=\mu_n\sigma_x^2+\mu_n\mu_x
+$$
+$$
+Var[S]=\mu_n\sigma_x^2+\mu_n\mu_x-\mu_n^2\mu_x^2
+$$
 
 4. 
 $$
