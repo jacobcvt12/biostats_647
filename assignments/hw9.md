@@ -39,7 +39,10 @@ $$
 $$
 Which is negative binomial distribution.
 
-5.
+5. We know that $F_{Y_2}(y)=F(y)^n$ and $F_{Y_1}(y)=1-(1-F(y))^n$. Then $P(Y_1 \leq u, Y_2 \leq v)=F(v)^n - [F(v)-F(u)]^n$. So for $F(x;0, \theta)=\frac{x}{\theta}$, the join distribution is 
+$$
+(\frac{v}{\theta})^n-[\frac{v}{\theta}-\frac{u}{\theta}]^n
+$$
 
 6.
 $$
