@@ -29,5 +29,3 @@ Which is negative binomial distribution.
 6.
 
 7.
-
-8.
