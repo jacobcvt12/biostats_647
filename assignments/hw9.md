@@ -17,16 +17,16 @@ $$
 E[S]=E[E[S|N]]=E[\sum_i^N X_i] =E[N \mu_x]=\mu_n \mu_x
 $$
 $$
-Var[S]=E[S^2]-E[S]^2
+Var[S]=E[Var(S|N)]+Var(E[S|N])
 $$
 $$
-E[S]^2=\mu_n^2\mu_x^2
+Var(S|N)=\sum Var(X_i) = n \sigma_x^2
 $$
 $$
-E[S^2]=E[E[S^2|N]]=E[Var(S|N)+(E[S|N])^2]=\mu_n\sigma_x^2+\mu_n\mu_x
+Var(E[S|N])=\mu_x^2 \sigma_N^2
 $$
 $$
-Var[S]=\mu_n\sigma_x^2+\mu_n\mu_x-\mu_n^2\mu_x^2
+Var[S]=\mu_N\sigma_x^2+\mu_x^2\sigma_N^2
 $$
 
 4. 
