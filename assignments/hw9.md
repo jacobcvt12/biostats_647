@@ -57,4 +57,12 @@ P(\theta|X) &= \frac{P(X|\theta)P(\theta)}{P(X)} \\
 \end{aligned}
 $$
 
-7.
+7. We have that $p(\mu) \propto \exp(-\frac{1}{2\sigma^2} (\mu^2-2\mu \mu_0))$. Then
+$$
+\begin{aligned}
+p(\mu|x) &\propto p(x|\mu)p(\mu) \\
+&\propto \exp(-\frac{1}{2\sigma^2}(\mu^2-2x\mu))\exp(-\frac{1}{2\sigma^2}(\mu^2-2\mu_0\mu)) \\
+&= \exp(-\frac{1}{2\sigma^2}(\mu^2-2\mu(x+\mu_0))) \\
+&\propto \text{N}(\mu, \sigma^2 | x+\mu_0)
+\end{aligned}
+$$
