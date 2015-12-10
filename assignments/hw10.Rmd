@@ -169,6 +169,30 @@ output: pdf_document
     c(lower, upper)
     ```
 
+    This confidence interval represents an interval such that in a large number of experiments, the interval would contain the truth.
+
+    Here we computationally calculate the likelihood interval
+    ```{r 5g2}
+    lik <- function(theta, theta.hat, n) {
+        return((theta.hat / theta) ^ n * exp(-n * (theta.hat / theta - 1)))
+    }
+
+    x <- seq(1, 100, by=0.01)
+    likelihood <- sapply(x, lik, mean(y), length(y))
+    dist <- abs(likelihood - 1 / 8)
+
+    # sort data by distance from desired k=1/8
+    data <- cbind(x, likelihood, dist)
+    data <- data[order(dist), ]
+
+    # grab first 10 values and then get min/max
+    ci <- data[1:10, "x"]
+    ci <- c(min(ci), max(ci))
+    ci
+    ```
+
+    This $\theta$ represents the values where the evidence of the data is 1/8 that of the MLE or less.
+
 6. (a)
     $$
     F_{Y_n}(y)=F_x(y)^n \implies f_{Y_n}(y)=nF_x(y)^{n-1}f_x(y)
