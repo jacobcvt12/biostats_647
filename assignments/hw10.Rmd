@@ -135,6 +135,9 @@ output: pdf_document
     \text{Var}(\bar{X})=\frac{1}{n^2}\text{Var}(\sum X_i) = \frac{1}{n^2}(E([\sum x_i]^2)-[E(\sum x_i)]^2)=\frac{1}{n^2} \sum \text{Var}(X_i)
     $$
     (c)
+    $$
+    \frac{\theta^{-n}\exp(-\theta^{-1}\sum x_i)}{\hat{\theta}^{-n}\exp(-\hat{\theta}^{-1}\sum x_i)} = \Big(\frac{\hat{\theta}}{\theta}\Big)^n\exp(n \bar{x}(1/\bar{x}-1/\theta))=\Big(\frac{\hat{\theta}}{\theta}\Big)^n\exp\Big\{-n\Big(\frac{\hat{\theta}}{\theta}-1\Big)\Big\}
+    $$
 
     (d)
 
