@@ -140,10 +140,24 @@ output: pdf_document
     $$
 
     (d)
+    $$
+    Y=n\hat{\theta}=n\bar{X}=\frac{n\sum X_i}{n}=S_n \sim \text{Gamma}(\alpha_1+...+\alpha_n, \beta)
+    $$
+    Then for $\alpha_i=1, \beta=\theta$
+    $$
+    S_n \sim \text{Gamma}(n, \beta)
+    $$
 
     (e)
+    $$
+    P(Z \leq z)=P(Y \leq z \theta) = \frac{\gamma(n, z)}{\Gamma(n)} \implies f(z; \theta) = \frac{z^{n-1}e^{-z}}{\Gamma(n)}
+    $$
+    Then $\frac{n\hat{\theta}}{\theta} \sim \text{Gamma}(n, 1)$
 
-    (f)
+    (f) Let $\gamma_p(\alpha, \beta)$ denote the $p-$th quantile of a gamma distribution. Then
+    $$
+    L=\gamma_{\alpha/2}(n, 1); U=\gamma_{1-\alpha/2}(n, 1)
+    $$
 
     (g) Note that we can rewrite the 95% confidence interval as $P(n\hat{\theta}/U \leq \theta \leq n\hat{\theta}/L)$ where $L$ and $U$ represent the lower and upper limits of part (f) respectively. Then
     ```{r 5g1}
