@@ -67,6 +67,13 @@ output: pdf_document
     $$
 
     (vi)
+    $$
+    E[\hat{beta}]=\frac{1}{\sum x_i^2} \sum x_i E[y_i] = \beta
+    $$
+    $$
+    \text{Var}[\hat{beta}]=\frac{1}{(\sum x_i^2)^2} \sum x_i^2 \text{Var}[y_i] = \frac{\sigma^2}{\sum x_i^2}
+    $$
+    Then the sampling distribution is $N(\beta, \frac{\sigma^2}{\sum x_i^2}
 
     (vii)
 
