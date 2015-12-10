@@ -135,7 +135,15 @@ output: pdf_document
 
     (f)
 
-    (g)
+    (g) Note that we can rewrite the 95% confidence interval as $P(n\hat{\theta}/U \leq \theta \leq n\hat{\theta}/L)$ where $L$ and $U$ represent the lower and upper limits of part (f) respectively. Then
+    ```{r 5g1}
+    y <- c(70, 11, 66, 5, 20, 4, 35, 40, 29, 8)
+    n <- length(y)
+    theta.hat <- mean(y)
+    lower <- n * theta.hat / qgamma(0.975, n, 1)
+    upper <- n * theta.hat / qgamma(0.025, n, 1)
+    c(lower, upper)
+    ```
 
 6. (a)
     $$
