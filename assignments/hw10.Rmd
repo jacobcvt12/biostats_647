@@ -243,6 +243,17 @@ output: pdf_document
     $$
     It follows that the MLE of $\theta$ is the maximum $X_1, ..., X_n$
 
+    (e)
+    $$
+    P(T \leq t) = F_x(t \theta)^n = \begin{cases}
+    0 & t \theta < 0 \\
+    t^n & t\theta \in [0, \theta) \\
+    1 & t \theta \geq 0
+    \end{cases}
+    $$
+    Then we have that
+    $F_T(\alpha^{1/n}) = \alpha$ and $F_T(1) = 1$. Thus $P(\alpha^{1/n} \leq T \leq)=1-\alpha$. Then the confidence interval is $(\hat{\theta}, \frac{\hat{\theta}}{\alpha^{1/n}})$
+
 7. 
     ```{r 7}
     ci <- function(x, mean, var) {
